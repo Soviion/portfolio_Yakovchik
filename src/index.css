@@ -1,0 +1,110 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f6f4fb;
+  --bg-soft: #efebf9;
+  --surface: #ffffff;
+  --surface-alt: #ede8f9;
+  --border: #e0d9f0;
+  --border-strong: #cdc2e8;
+  --text: #211f2e;
+  --text-soft: #5f5a75;
+  --text-faint: #8a84a0;
+  --accent: #6d28d9;
+  --accent-2: #0891b2;
+  --accent-soft: rgba(109, 40, 217, 0.1);
+  --shadow: 0 20px 40px -18px rgba(76, 29, 149, 0.25);
+  --gradient: linear-gradient(135deg, #d3369b 0%, #7c3aed 48%, #f97316 100%);
+  --highlight: rgba(255, 255, 255, 0.85);
+}
+
+.dark {
+  --bg: #241b2f;
+  --bg-soft: #2b2138;
+  --surface: #322646;
+  --surface-alt: #3d2e55;
+  --border: #524070;
+  --border-strong: #6d5694;
+  --text: #faf6fd;
+  --text-soft: #d5c8e8;
+  --text-faint: #a291c0;
+  --accent: #c579ff;
+  --accent-2: #ffa259;
+  --accent-soft: rgba(197, 121, 255, 0.2);
+  --shadow: 0 20px 45px -16px rgba(197, 121, 255, 0.32);
+  --gradient: linear-gradient(135deg, #ff5fa2 0%, #c579ff 48%, #ffa259 100%);
+  --highlight: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image: none;
+  color: var(--text);
+  font-family: "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
+  transition: background-color 0.35s ease, color 0.35s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark body {
+  background-image:
+    radial-gradient(ellipse 70% 45% at 15% -5%, rgba(255, 95, 162, 0.24), transparent 60%),
+    radial-gradient(ellipse 60% 45% at 90% 8%, rgba(255, 162, 89, 0.16), transparent 55%),
+    radial-gradient(ellipse 55% 40% at 50% 100%, rgba(197, 121, 255, 0.2), transparent 60%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+.gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* "Надутые" элементы: внутренний блик сверху + мягкая внешняя тень */
+.puff {
+  border-radius: 2rem;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(180deg, var(--highlight), transparent 22%) border-box,
+    var(--surface);
+  box-shadow:
+    inset 0 1.5px 0 var(--highlight),
+    var(--shadow);
+}
+
+.puff-chip {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+  box-shadow: inset 0 1px 0 var(--highlight), 0 2px 8px -2px rgba(0, 0, 0, 0.18);
+}
