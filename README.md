@@ -1,16 +1,62 @@
-# React + Vite
+# Портфолио — Яковчик Алексей
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Личный сайт-портфолио: биография, навыки, статья о защите персональных данных и семь реальных проектов со скриншотами.
 
-Currently, two official plugins are available:
+Лёгкий и быстрый сайт без бэкенда: собирается в статику и крутится в Docker-контейнере на домашнем сервере.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Обо мне
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Яковчик Алексей** — fullstack-разработчик и системный аналитик из Минска. Студент БГУИР.
 
-## Expanding the Oxlint configuration
+Более года практического опыта full-stack разработки и системного анализа в банкинге, EdTech и администрировании корпоративных ИТ-систем. Проектирую архитектуру (C4, ERD, REST API/OpenAPI), интегрирую внешние системы и AI-агентов (LLM tool calling), работаю с PostgreSQL, Docker и Linux-инфраструктурой.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+**Контакты:**
+
+- Telegram: [@Foggislimm](https://t.me/Foggislimm)
+- GitHub: [Soviion](https://github.com/Soviion)
+- Email: alexeyyakovchik09@gmail.com
+- Телефон: +375 (44) 74-57-242
+
+---
+
+## Что на сайте
+
+- **Визитка** — фото, короткая био, ключевые навыки и контакты одним экраном.
+- **Статья** «Требования к ПО при обработке персональных данных» (законодательство РБ: Закон №99-З, Приказ ОАЦ №66) — с возможностью скачать PDF.
+- **7 проектов** с живыми скриншотами, подписями к каждому экрану и описанием моей роли:
+
+  | Проект | Что это | Роль |
+  |---|---|---|
+  | UIVR | Telegram-бот + админ-панель волонтёрского центра БГУИР (в продакшене) | Full-cycle разработчик |
+  | SMDB Solution | AI-администрирование парка MS SQL Server через браузер и локальную LLM | Разработчик / архитектор |
+  | Cash Management | Проектирование банковского модуля: C4, ERD, OpenAPI, Figma | Системный аналитик |
+  | IVC AI Bot | RAG-чатбот по нормативным актам РБ для ИВЦ Минфина | Fullstack AI-разработчик |
+  | Chrona | Умный планировщик с AI-ассистентом и Telegram-ботом | Fullstack-разработчик |
+  | Автодоктор | Продающий лендинг автосервиса | Разработчик и дизайнер |
+  | МедМониторинг | Учёт медоборудования для Лидской ЦРБ (дипломный проект) | Fullstack-разработчик |
+
+Тёмная (по умолчанию) и светлая темы, «надутый» дизайн с пружинными анимациями, рабочие карусели скриншотов с лайтбоксом.
+
+## Технологии сайта
+
+React 18 + Vite · Tailwind CSS 4 · Framer Motion · сборка в статику, деплой в Docker (nginx).
+
+## Запуск
+
+```bash
+npm install
+npm run dev      # разработка, http://localhost:5173
+npm run build    # прод-сборка в dist/
+```
+
+Docker:
+
+```bash
+docker compose up -d --build
+```
+
+---
+
+© Яковчик Алексей, 2026

@@ -1,0 +1,17 @@
+services:
+  portfolio:
+    build:
+      context: /opt/stacks/porfolio
+      dockerfile: Dockerfile
+    container_name: portfolio
+    restart: unless-stopped
+    environment:
+      TZ: Europe/Minsk
+    expose:
+      - "80"
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
