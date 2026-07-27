@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 
 export default function ProjectsSection() {
   return (
-    <section className="mx-auto max-w-5xl px-6 pt-10 pb-24">
+    <section id="projects" className="mx-auto max-w-5xl scroll-mt-6 px-6 pt-10 pb-24">
       <motion.h2
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}

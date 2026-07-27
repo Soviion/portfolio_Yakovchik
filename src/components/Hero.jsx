@@ -7,7 +7,17 @@ const spring = { type: "spring", stiffness: 120, damping: 16 };
 
 const facts = [
   { icon: GraduationCap, label: "Образование", value: profile.education },
-  { icon: Languages, label: "Языки", value: "Русский — родной · Английский — B1" },
+  {
+    icon: Languages,
+    label: "Языки",
+    value: (
+      <>
+        Русский — родной
+        <br />
+        Английский — B1
+      </>
+    ),
+  },
   { icon: MapPin, label: "Локация", value: profile.location },
 ];
 
@@ -70,8 +80,6 @@ export default function Hero() {
             <p className="mt-1.5 gradient-text text-lg font-semibold md:text-xl">
               {profile.role}
             </p>
-            <p className="mt-1 text-sm text-[var(--text-faint)]">{profile.age}</p>
-
             <p className="mt-5 text-sm leading-relaxed text-[var(--text-soft)] md:text-[15px]">
               {profile.bio}
             </p>

@@ -17,6 +17,7 @@
   --shadow: 0 20px 40px -18px rgba(76, 29, 149, 0.25);
   --gradient: linear-gradient(135deg, #d3369b 0%, #7c3aed 48%, #f97316 100%);
   --highlight: rgba(255, 255, 255, 0.85);
+  --arrow-opacity: 0.05;
 }
 
 .dark {
@@ -35,6 +36,7 @@
   --shadow: 0 20px 45px -16px rgba(197, 121, 255, 0.32);
   --gradient: linear-gradient(135deg, #ff5fa2 0%, #c579ff 48%, #ffa259 100%);
   --highlight: rgba(255, 255, 255, 0.08);
+  --arrow-opacity: 0.12;
 }
 
 * {
